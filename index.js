@@ -33,18 +33,17 @@ inquirer
     },
     {
       type: "input",
-      message: "Enter the Table of contents for installation:",
+      message: "Enter the installation:",
       name: "installation",
     },
     {
       type: "input",
-      message: "Enter the Table of contents for usage:",
+      message: "Enter the usage:",
       name: "usage",
     },
     {
       type: "list",
-      message:
-        "Enter the Table of contents for license:(use arrow keys to choose)",
+      message: "Enter the license:(use arrow keys to choose)",
       name: "license",
       choices: [
         "MIT",
@@ -57,12 +56,12 @@ inquirer
     },
     {
       type: "input",
-      message: "Enter the Table of contents for contributions:",
+      message: "Enter the contributions:",
       name: "contributor",
     },
     {
       type: "input",
-      message: "Enter the Table of contents for Tests:",
+      message: "Enter the Tests:",
       name: "test",
     },
     {
@@ -89,7 +88,7 @@ inquirer
         `5. [--> Tests](#test)\n` +
         `6. [--> Questions](#question)\n` +
         `## Installation \n ${response.installation}\n` +
-        `## Usage \n ${response.usage}\n` +
+        `## Usage \n https://drive.google.com/file/d/1lrLhml71mATqpY9RyXnF4rvWcpSToTNd/view?usp=sharing \n` +
         `## License\n  [![License: MIT](https://img.shields.io/badge/License-${response.license}-yellow.svg)](https://opensource.org/licenses/${response.license})\n` +
         `## Contributor \n ${response.contributor}\n` +
         `## Test\n ${response.test}\n` +
