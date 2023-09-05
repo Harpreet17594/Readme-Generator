@@ -96,7 +96,7 @@ inquirer
         `6. [--> Questions](#question) \n` +
         `## Installation \n ${response.installation}\n` +
         `## Usage \n  ${response.usage} \n` +
-        ` [![Watch the video](https://i.stack.imgur.com/Vp2cE.png)](https://www.youtube.com/watch?v=nhLsuEuOuJc) \n` +
+        ` [![Watch the video](readme.png)](https://www.youtube.com/watch?v=nhLsuEuOuJc) \n` +
         `## License \n  [![License: MIT](https://img.shields.io/badge/License-${response.license}-yellow.svg)](https://opensource.org/licenses/${response.license})\n` +
         `## Contributor \n ${response.contributor}\n` +
         `## Test \n ${response.test}\n` +
