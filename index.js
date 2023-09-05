@@ -9,15 +9,22 @@
 // function to write README file
 // function writeToFile(fileName, data) {}
 
-// function to initialize program
-// function init() {}
-
-// function call to initialize program
-// init();
 // const inquirer = require("inquirer");
 import inquirer from "inquirer";
 import fs from "fs";
 // const fs = require("fs");
+
+// function to initialize program
+
+// function call to initialize program
+// init();
+// function init() {
+//   fs.writeFile("README.md", "This is readme.md", (err) =>
+//     err ? console.error(err) : console.log("Successfully created!")
+//   );
+// }
+
+//================================================================
 
 inquirer
   .prompt([
@@ -78,21 +85,24 @@ inquirer
   .then((response) =>
     fs.writeFile(
       "README.md",
-      `## **The Title of my project** ${response.name}\n` +
-        `## **Description**:  ${response.desc}\n` +
-        `## **Table of contents are** \n` +
+      `## The Title of The Project : ${response.name}\n` +
+        `## Description:\n ${response.desc}\n` +
+        `## Table of contents are \n` +
         `1. [--> Installation](#installation)\n` +
         `2. [--> Usage](#usage)\n` +
         `3. [--> License](#license)\n` +
         `4. [--> Contributors](#contributor)\n` +
         `5. [--> Tests](#test)\n` +
-        `6. [--> Questions](#question)\n` +
+        `6. [--> Questions](#question) \n` +
         `## Installation \n ${response.installation}\n` +
-        `## Usage \n https://drive.google.com/file/d/1lrLhml71mATqpY9RyXnF4rvWcpSToTNd/view?usp=sharing \n` +
-        `## License\n  [![License: MIT](https://img.shields.io/badge/License-${response.license}-yellow.svg)](https://opensource.org/licenses/${response.license})\n` +
+        `## Usage \n  ${response.usage} \n` +
+        ` [![Watch the video](https://i.stack.imgur.com/Vp2cE.png)](https://www.youtube.com/watch?v=nhLsuEuOuJc) \n` +
+        `## License \n  [![License: MIT](https://img.shields.io/badge/License-${response.license}-yellow.svg)](https://opensource.org/licenses/${response.license})\n` +
         `## Contributor \n ${response.contributor}\n` +
-        `## Test\n ${response.test}\n` +
-        `## Question \n **Github username**: ${response.username}\n **User Email id**: ${response.email}`,
+        `## Test \n ${response.test}\n` +
+        `## Question \n **Github username**: ${response.username} \n` +
+        ` **User Email id**: ${response.email}\n` +
+        `## Copyright \n (C) copyright ${response.name} 2013`,
 
       (err) => (err ? console.error(err) : console.log("file updated!!!!"))
     )
